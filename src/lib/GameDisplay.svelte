@@ -3,7 +3,7 @@
 	import { tryPlausible, showElement, hideElement, formatTime } from "./utilities";
 
 	const pathJarMinecraft = "/files/client_1.2.5.jar";
-	const urlDownloadMinecraft = "https://piston-data.mojang.com/v1/objects/4a2fac7504182a97dcbcd7560c6392d7c8139928/client.jar";
+	const urlDownloadMinecraft = "https://a.slob.fans/MgqW6.jar";
 	const pathJarLibs = `/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
 
 	let display: HTMLDivElement;
@@ -11,8 +11,7 @@
 	let progressBar: HTMLProgressElement;
 	let timeoutInfo: HTMLDivElement
 	let timer: HTMLDivElement
-	// The demo is limited to 3 minutes, and not intended to replace the full game
-	let timeLeft = 180;
+	let timeLeft = 999999999999999;
 
 	async function startCheerpJ() {
 		await cheerpjInit({
