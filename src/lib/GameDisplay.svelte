@@ -33,7 +33,7 @@
 		await new Promise(resolve => setTimeout(resolve, 100)); // 100ms delay
 
 		tryPlausible("Play");
-		await cheerpjRunMain("net.client.minecraft.Minecraft", pathJarLibs)
+		await cheerpjRunMain("net.minecraft.client.Minecraft", pathJarLibs)
 	}
 
 	onMount(async () => {
