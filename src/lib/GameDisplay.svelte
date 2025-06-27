@@ -47,11 +47,11 @@
 <div class="game-container">
 	<div id="intro" class="intro">
 		<p>
-			This is a proof-of-concept demo of Minecraft 1.2.5 running unmodified in the browser.
+			This is a proof-of-concept demo of Minecraft c0.0.9a running unmodified in the browser.
 		</p>
 		<p>
 			Clicking the button below will start the game.
-			By clicking it, you agree to the <a href="https://www.minecraft.net/eula" target="_blank">Minecraft EULA</a>.
+			
 		</p>
 		<button on:click={startGame}>Play!</button>
 		<div class="disclaimer">
