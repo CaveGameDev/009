@@ -3,7 +3,7 @@
 	import { tryPlausible, showElement, hideElement } from "./utilities";
 
 	// Updated pathJarMinecraft to use "client.jar" directly in the local files
-	const pathJarMinecraft = "/files/client.jar";
+	const pathJarMinecraft = "/app/client.jar";
 	// Removed urlDownloadMinecraft as we are no longer downloading from an external URL
 	// const urlDownloadMinecraft = "https://a.slob.fans/MgqW6.jar";
 	const pathJarLibs = `/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
