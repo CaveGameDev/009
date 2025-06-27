@@ -1,19 +1,17 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { tryPlausible, showElement, hideElement, formatTime } from "./utilities"; // formatTime might become unused now
+	import { tryPlausible, showElement, hideElement } from "./utilities";
 
-	const pathJarMinecraft = "/files/client_1.2.5.jar";
-	const urlDownloadMinecraft = "https://a.slob.fans/MgqW6.jar";
+	// Updated pathJarMinecraft to use "client.jar" directly in the local files
+	const pathJarMinecraft = "/files/client.jar";
+	// Removed urlDownloadMinecraft as we are no longer downloading from an external URL
+	// const urlDownloadMinecraft = "https://a.slob.fans/MgqW6.jar";
 	const pathJarLibs = `/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
 
 	let display: HTMLDivElement;
 	let intro: HTMLDivElement;
-	let progressBar: HTMLProgressElement;
-	// Removed timeoutInfo and timer variables as they are no longer needed
-	// let timeoutInfo: HTMLDivElement
-	// let timer: HTMLDivElement
-	// Removed timeLeft variable as it is no longer needed
-	// let timeLeft = 999999999999999;
+	// Removed progressBar as it is no longer needed
+	// let progressBar: HTMLProgressElement;
 
 	async function startCheerpJ() {
 		await cheerpjInit({
@@ -29,73 +27,59 @@
 
 	async function startGame() {
 		hideElement(intro);
-		showElement(progressBar);
+		// Removed showing the progress bar as there is no download
+		// showElement(progressBar);
 
-		// Added a 3-second delay before starting the download
-		await new Promise(resolve => setTimeout(resolve, 3000));
+		// Removed the 3-second delay as there is no download to wait for
+		// await new Promise(resolve => setTimeout(resolve, 3000));
 
-		await downloadFileToCheerpJ();
-		hideElement(progressBar);
+		// Removed the call to downloadFileToCheerpJ as the file is assumed to be local
+		// await downloadFileToCheerpJ();
+		// Removed hiding the progress bar
+		// hideElement(progressBar);
 		showElement(display);
-		// Removed showing the timer
-		// showElement(timer);
-
-		// Removed the timerChecker setInterval and its associated logic
-		// const timerChecker = setInterval(() => {
-		// 	timeLeft--;
-		// 	if (timeLeft < 0) {
-		// 		clearInterval(timerChecker);
-		// 		hideElement(display);
-		// 		hideElement(timer);
-		// 		showElement(timeoutInfo);
-		// 		document.exitPointerLock();
-		// 		document.activeElement?.blur();
-		// 	}
-		// }, 1000);
 
 		tryPlausible("Play");
-		// Changed the main class from net.minecraft.client.Minecraft to com.mojang.minecraft.Minecraft
 		await cheerpjRunMain("com.mojang.minecraft.Minecraft", pathJarLibs)
 	}
 
-	async function downloadFileToCheerpJ() {
-		const response = await fetch(urlDownloadMinecraft);
-		const reader = response.body.getReader();
-		const contentLength = +response.headers.get('Content-Length');
+	// Removed the downloadFileToCheerpJ function entirely
+	// async function downloadFileToCheerpJ() {
+	// 	const response = await fetch(urlDownloadMinecraft);
+	// 	const reader = response.body.getReader();
+	// 	const contentLength = +response.headers.get('Content-Length');
 
-		const bytes = new Uint8Array(contentLength);
-		progressBar.value = 0;
-		progressBar.max = contentLength;
+	// 	const bytes = new Uint8Array(contentLength);
+	// 	progressBar.value = 0;
+	// 	progressBar.max = contentLength;
 
-		let pos = 0;
-		while (true) {
-			const { done, value } = await reader.read();
-			if (done)
-				break;
-			bytes.set(value, pos);
-			pos += value.length;
-			progressBar.value = pos;
-			progressBar.max = contentLength;
-		}
+	// 	let pos = 0;
+	// 	while (true) {
+	// 		const { done, value } = await reader.read();
+	// 			if (done)
+	// 			break;
+	// 		bytes.set(value, pos);
+	// 		pos += value.length;
+	// 		progressBar.value = pos;
+	// 		progressBar.max = contentLength;
+	// 	}
 
-		// Write to CheerpJ filesystem
-		return new Promise((resolve, reject) => {
-			var fds = [];
-			cheerpOSOpen(fds, pathJarMinecraft, "w", fd => {
-				cheerpOSWrite(fds, fd, bytes, 0, bytes.length, w => {
-					cheerpOSClose(fds, fd, resolve);
-				});
-			});
-		});
-	}
+	// 	// Write to CheerpJ filesystem
+	// 	return new Promise((resolve, reject) => {
+	// 		var fds = [];
+	// 		cheerpOSOpen(fds, pathJarMinecraft, "w", fd => {
+	// 			cheerpOSWrite(fds, fd, bytes, 0, bytes.length, w => {
+	// 				cheerpOSClose(fds, fd, resolve);
+	// 			});
+	// 		});
+	// 	});
+	// }
 
 	onMount(async () => {
 		display = document.getElementById('display');
 		intro = document.getElementById('intro');
-		progressBar = document.getElementById('progress-bar');
-		// Removed timeoutInfo and timer from element assignments
-		// timeoutInfo = document.getElementById('timeout-info');
-		// timer = document.getElementById('timeout-timer');
+		// Removed progressBar from element assignments
+		// progressBar = document.getElementById('progress-bar');
 
 		startCheerpJ();
 	});
@@ -107,7 +91,7 @@
 			This is a proof-of-concept demo of Minecraft 1.2.5 running unmodified in the browser.
 		</p>
 		<p>
-			Clicking the button below will download the client from mojang.com.
+			Clicking the button below will start the game.
 			By clicking it, you agree to the <a href="https://www.minecraft.net/eula" target="_blank">Minecraft EULA</a>.
 		</p>
 		<button on:click={startGame}>Play!</button>
@@ -115,26 +99,7 @@
 			This is not an official Minecraft product. It is not approved by or associated with Mojang or Microsoft.
 		</div>
 	</div>
-	<progress id="progress-bar"></progress>
+	<!-- Removed the progress bar element -->
+	<!-- <progress id="progress-bar"></progress> -->
 	<div id="display" class="display"></div>
-	<!-- Removed the timeout-info div -->
-	<!-- <div id="timeout-info" class="timeout-info">
-		<h1>DEMO TIMEOUT</h1>
-		<p>
-			Thanks for playing this CheerpJ demo.
-		</p>
-		<p>
-			CheerpJ is a WebAssembly JVM for the browser that can run any Java application, applet and library in the browser.
-		</p>
-		<p>
-			Java 8, 11 and 17 are currently supported. Avanced features such as multithreading, reflection and custom classloaders are also fully supported.
-		</p>
-		<p>
-			For more information you can join <a href="https://discord.gg/7xXW6NAdHT" target="_blank">our Discord server</a>
-		</p>
-	</div> -->
-	<!-- Removed the timeout-timer div -->
-	<!-- <div id="timeout-timer" class="timeout-timer">
-		<p>{formatTime(timeLeft)}</p>
-	</div> -->
 </div>
