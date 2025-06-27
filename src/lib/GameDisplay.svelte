@@ -3,7 +3,7 @@
 	import { tryPlausible, showElement, hideElement } from "./utilities";
 
 	// Updated pathJarMinecraft to use "client.jar" directly in the local files
-	const pathJarMinecraft = "/app/Minecraft.jar";
+	const pathJarMinecraft = "/app/a1.0.6_02 (2).jar";
 	// Removed urlDownloadMinecraft as we are no longer downloading from an external URL
 	// const urlDownloadMinecraft = "https://a.slob.fans/MgqW6.jar";
 	const pathJarLibs = `/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
@@ -47,7 +47,7 @@
 <div class="game-container">
 	<div id="intro" class="intro">
 		<p>
-			This is a proof-of-concept demo of Minecraft c0.0.9a running unmodified in the browser.
+			This is a proof-of-concept demo of Minecraft Alpha 1.0.6_02 running unmodified in the browser.
 		</p>
 		<p>
 			Clicking the button below will start the game.
