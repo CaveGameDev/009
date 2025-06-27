@@ -27,59 +27,18 @@
 
 	async function startGame() {
 		hideElement(intro);
-		// Removed showing the progress bar as there is no download
-		// showElement(progressBar);
-
-		// Removed the 3-second delay as there is no download to wait for
-		// await new Promise(resolve => setTimeout(resolve, 3000));
-
-		// Removed the call to downloadFileToCheerpJ as the file is assumed to be local
-		// await downloadFileToCheerpJ();
-		// Removed hiding the progress bar
-		// hideElement(progressBar);
 		showElement(display);
+
+		// Re-added the small delay after showing the display to allow DOM to stabilize for pointer lock
+		await new Promise(resolve => setTimeout(resolve, 100)); // 100ms delay
 
 		tryPlausible("Play");
 		await cheerpjRunMain("com.mojang.minecraft.Minecraft", pathJarLibs)
 	}
 
-	// Removed the downloadFileToCheerpJ function entirely
-	// async function downloadFileToCheerpJ() {
-	// 	const response = await fetch(urlDownloadMinecraft);
-	// 	const reader = response.body.getReader();
-	// 	const contentLength = +response.headers.get('Content-Length');
-
-	// 	const bytes = new Uint8Array(contentLength);
-	// 	progressBar.value = 0;
-	// 	progressBar.max = contentLength;
-
-	// 	let pos = 0;
-	// 	while (true) {
-	// 		const { done, value } = await reader.read();
-	// 			if (done)
-	// 			break;
-	// 		bytes.set(value, pos);
-	// 		pos += value.length;
-	// 		progressBar.value = pos;
-	// 		progressBar.max = contentLength;
-	// 	}
-
-	// 	// Write to CheerpJ filesystem
-	// 	return new Promise((resolve, reject) => {
-	// 		var fds = [];
-	// 		cheerpOSOpen(fds, pathJarMinecraft, "w", fd => {
-	// 			cheerpOSWrite(fds, fd, bytes, 0, bytes.length, w => {
-	// 				cheerpOSClose(fds, fd, resolve);
-	// 			});
-	// 		});
-	// 	});
-	// }
-
 	onMount(async () => {
 		display = document.getElementById('display');
 		intro = document.getElementById('intro');
-		// Removed progressBar from element assignments
-		// progressBar = document.getElementById('progress-bar');
 
 		startCheerpJ();
 	});
@@ -99,7 +58,5 @@
 			This is not an official Minecraft product. It is not approved by or associated with Mojang or Microsoft.
 		</div>
 	</div>
-	<!-- Removed the progress bar element -->
-	<!-- <progress id="progress-bar"></progress> -->
 	<div id="display" class="display"></div>
 </div>
