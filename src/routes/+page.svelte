@@ -20,7 +20,7 @@
 </script>
 
 <header>
-	<h1>MineCraft</h1>
+	<h1>JSlauncher</h1>
 	<div>
 		<GameDisplay />
 		<PageControls />
