@@ -42,7 +42,7 @@
 		await cheerpjRunMain(
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
-			"--tweakClass", "VanillaTweaker",
+			"--tweakClass", "net.minecraft.launchwrapper.VanillaTweaker",
 			"--gameDir", "/app/minecraft_data", // Added game directory
 			// Removed "--assetsDir", "/app/assets", as requested
 			"--version", "1.7.10",             // Added Minecraft version
