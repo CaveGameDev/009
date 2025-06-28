@@ -1,4 +1,4 @@
-<script lang="ts">
+script lang="ts">
 	import { onMount } from 'svelte';
 	import { tryPlausible, showElement, hideElement } from "./utilities";
 
@@ -12,7 +12,8 @@
 
 	// Combine all necessary JARs into the classpath for LaunchWrapper
 	// LWJGL, ASM, and JOpt Simple JARs are now included directly in the classpath string.
-	const pathJarLibs = `${pathJarLaunchWrapper}:/app/asm-all-4.1.jar:/app/jopt-simple-4.5.jar:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
+	// Added Log4j API and Core JARs for Minecraft 1.7.10 logging.
+	const pathJarLibs = `${pathJarLaunchWrapper}:/app/asm-all-4.1.jar:/app/jopt-simple-4.5.jar:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:/app/log4j-api-2.0-beta9.jar:/app/log4j-core-2.0-beta9.jar:${pathJarMinecraft}`;
 
 	let display: HTMLDivElement;
 	let intro: HTMLDivElement;
@@ -42,11 +43,10 @@
 		await cheerpjRunMain(
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
-			"--tweakClass", "net.minecraft.launchwrapper.VanillaTweaker",
-			"--gameDir", "/app/minecraft_data", // Added game directory
-			// Removed "--assetsDir", "/app/assets", as requested
-			"--version", "1.7.10",             // Added Minecraft version
-			"--username", "CheerPJPlayer"        // Added a default username
+			"--tweakClass", "net.minecraft.launchwrapper.VanillaTweaker", 
+			"--gameDir", "/app/minecraft_data", 
+			"--version", "1.7.10",             
+			"--username", "CheerPJPlayer"        
 		);
 	}
 
@@ -61,7 +61,7 @@
 <div class="game-container">
 	<div id="intro" class="intro">
 		<p>
-			This is Minecraft 1.7.10 running unmodified in the browser.
+			This is a proof-of-concept demo of Minecraft Alpha 1.0.6_02 running unmodified in the browser.
 		</p>
 		<p>
 			Clicking the button below will start the game.
