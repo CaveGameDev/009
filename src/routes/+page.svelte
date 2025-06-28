@@ -22,9 +22,7 @@
 	<h1>JSlauncher</h1>
 	<div>
 		<GameDisplay />
-		<PageControls />
 	</div>
-	<GhLink />
 </header>
 <main>
 
