@@ -13,7 +13,7 @@
 
 	async function startCheerpJ() {
 		await cheerpjInit({
-			version: 8,
+			version: 17,
 			javaProperties: ["java.library.path=/app/lwjgl/libraries/"],
 			libraries: {"libGL.so.1": "/app/lwjgl/libraries/gl4es.wasm"},
 			enableX11:true,
