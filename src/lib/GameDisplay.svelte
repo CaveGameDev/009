@@ -12,7 +12,7 @@
 	// Combine all necessary JARs into the classpath for LaunchWrapper
 	// LWJGL, ASM, and JOpt Simple JARs are now included directly in the classpath string.
 	// Removed Log4j API and Core JARs to diagnose UnsatisfiedLinkError.
-	const pathJarLibs = `/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
+	const pathJarLibs = `${pathJarMinecraft}:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar`;
 
 	let display: HTMLDivElement;
 	let intro: HTMLDivElement;
