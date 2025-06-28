@@ -5,10 +5,10 @@
 	// --- Minecraft Launch Configuration ---
 
 	// Main Minecraft c0.0.19a client JAR
-	const pathJarMinecraft = "/app/1.8.jar"; 
+	const pathJarMinecraft = "/app/1.8.9.jar"; 
 
 	// LaunchWrapper main JAR
-	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
+	const pathJarLaunchWrapper = "/app/launchwrapper-1.12.jar";
 
 	// Combine all necessary JARs into the classpath for LaunchWrapper
 	// LWJGL, ASM, and JOpt Simple JARs are now included directly in the classpath string.
