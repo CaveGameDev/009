@@ -43,8 +43,7 @@
 		await cheerpjRunMain(
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
-			"--tweakClass", "net.minecraft.launchwrapper.VanillaTweaker", 
-			"--gameDir", "/app/minecraft_data",        
+			"--tweakClass", "net.minecraft.launchwrapper.VanillaTweaker",   
 			"--username", "CheerPJPlayer"        
 		);
 	}
