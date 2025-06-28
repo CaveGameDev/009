@@ -81,8 +81,8 @@ header {
 .display {
 	display: none;
 	position: relative;
-	width: 1000px;
-	height: 800px;
+	width: 800px;
+	height: 500px;
 	inset: 0;
 }
 
