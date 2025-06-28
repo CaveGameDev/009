@@ -3,7 +3,7 @@
 	import { tryPlausible, showElement, hideElement } from "./utilities";
 
 	// Updated pathJarMinecraft to use "client.jar" directly in the local files
-	const pathJarMinecraft = "/app/b1.7.3.jar";
+	const pathJarMinecraft = "/app/1.18.2.jar";
 	const pathJarLibs = `/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
 
 	let display: HTMLDivElement;
@@ -31,7 +31,7 @@
 		await new Promise(resolve => setTimeout(resolve, 100)); // 100ms delay
 
 		tryPlausible("Play");
-		await cheerpjRunMain("net.minecraft.client.Minecraft", pathJarLibs)
+		await cheerpjRunMain("net.minecraft.client.main.Main", pathJarLibs)
 	}
 
 	onMount(async () => {
