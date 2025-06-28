@@ -43,7 +43,7 @@
 		await cheerpjRunMain(
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
-			"--tweakClass",      
+			"--tweakClass", "net.minecraft.launchwrapper.AlphaVanillaTweaker"        
 		);
 	}
 
