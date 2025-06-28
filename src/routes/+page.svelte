@@ -2,8 +2,7 @@
 	import '../app.css'; 
 	import { onMount } from 'svelte';
 	import GameDisplay from '$lib/GameDisplay.svelte';
-	import GhLink from '$lib/GhLink.svelte';
-	import PageControls from '$lib/PageControls.svelte';
+	
 
 	onMount(() => {
 		const share = document.getElementById("share");
