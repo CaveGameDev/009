@@ -1,4 +1,4 @@
-script lang="ts">
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { tryPlausible, showElement, hideElement } from "./utilities";
 
