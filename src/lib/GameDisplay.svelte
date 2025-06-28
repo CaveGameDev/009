@@ -2,10 +2,10 @@
 	import { onMount } from 'svelte';
 	import { tryPlausible, showElement, hideElement } from "./utilities";
 
-	// --- Minecraft 1.7.10 Launch Configuration ---
+	// --- Minecraft Launch Configuration ---
 
-	// Main Minecraft 1.7.10 client JAR
-	const pathJarMinecraft = "/app/1.7.10.jar"; 
+	// Main Minecraft c0.0.9a client JAR
+	const pathJarMinecraft = "/app/client.jar"; 
 
 	// LaunchWrapper main JAR
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
@@ -20,7 +20,7 @@
 
 	async function startCheerpJ() {
 		await cheerpjInit({
-			version: 8, // Set CheerpJ version to 8, suitable for Minecraft 1.7.10
+			version: 8, // Set CheerpJ version to 8, suitable for Minecraft
 			javaProperties: ["java.library.path=/app/lwjgl/libraries/"], // Path to native DLLs
 			libraries: {"libGL.so.1": "/app/lwjgl/libraries/gl4es.wasm"},
 			enableX11:true,
@@ -43,9 +43,8 @@
 		await cheerpjRunMain(
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
-			"--tweakClass", "net.minecraft.launchwrapper.VanillaTweaker", 
-			"--gameDir", "/app/minecraft_data", 
-			"--version", "1.7.10",             
+			"--tweakClass", "net.minecraft.launchwrapper.AlphaVanillaTweaker", 
+			"--gameDir", "/app/minecraft_data",        
 			"--username", "CheerPJPlayer"        
 		);
 	}
@@ -61,7 +60,7 @@
 <div class="game-container">
 	<div id="intro" class="intro">
 		<p>
-			This is a proof-of-concept demo of Minecraft Alpha 1.0.6_02 running unmodified in the browser.
+			This is Minecraft "Alpha" c0.0.9a running unmodified in the browser.
 		</p>
 		<p>
 			Clicking the button below will start the game.
