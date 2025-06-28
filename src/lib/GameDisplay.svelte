@@ -4,8 +4,8 @@
 
 	// --- Minecraft Launch Configuration ---
 
-	// Main Minecraft c0.0.9a client JAR
-	const pathJarMinecraft = "/app/client.jar"; 
+	// Main Minecraft c0.0.19a client JAR
+	const pathJarMinecraft = "/app/c0.0.19a.jar"; 
 
 	// LaunchWrapper main JAR
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
