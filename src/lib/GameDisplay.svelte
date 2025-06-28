@@ -39,7 +39,15 @@
 		tryPlausible("Play");
 		// Use net.minecraft.launchwrapper.Launch as the main class,
 		// and pass the tweakClass as a program argument.
-		await cheerpjRunMain("net.minecraft.launchwrapper.Launch", pathJarLibs, "--tweakClass", "VanillaTweaker");
+		await cheerpjRunMain(
+			"net.minecraft.launchwrapper.Launch",
+			pathJarLibs,
+			"--tweakClass", "VanillaTweaker",
+			"--gameDir", "/app/minecraft_data", // Added game directory
+			// Removed "--assetsDir", "/app/assets", as requested
+			"--version", "1.7.10",             // Added Minecraft version
+			"--username", "CheerPJPlayer"        // Added a default username
+		);
 	}
 
 	onMount(async () => {
@@ -53,7 +61,7 @@
 <div class="game-container">
 	<div id="intro" class="intro">
 		<p>
-			This is a proof-of-concept demo of Minecraft Alpha 1.0.6_02 running unmodified in the browser.
+			This is Minecraft 1.7.10 running unmodified in the browser.
 		</p>
 		<p>
 			Clicking the button below will start the game.
