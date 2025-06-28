@@ -12,8 +12,8 @@
 
 	// Combine all necessary JARs into the classpath for LaunchWrapper
 	// LWJGL, ASM, and JOpt Simple JARs are now included directly in the classpath string.
-	// Added Log4j API and Core JARs for Minecraft 1.7.10 logging.
-	const pathJarLibs = `${pathJarLaunchWrapper}:/app/asm-all-4.1.jar:/app/jopt-simple-4.5.jar:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:/app/log4j-api-2.0-beta9.jar:/app/log4j-core-2.0-beta9.jar:${pathJarMinecraft}`;
+	// Removed Log4j API and Core JARs to diagnose UnsatisfiedLinkError.
+	const pathJarLibs = `${pathJarLaunchWrapper}:/app/asm-all-4.1.jar:/app/jopt-simple-4.5.jar:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
 
 	let display: HTMLDivElement;
 	let intro: HTMLDivElement;
