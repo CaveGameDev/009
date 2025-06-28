@@ -60,7 +60,7 @@
 <div class="game-container">
 	<div id="intro" class="intro">
 		<p>
-			This is Minecraft "Alpha" c0.0.9a running unmodified in the browser.
+			This is Minecraft running unmodified in the browser.
 		</p>
 		<p>
 			Clicking the button below will start the game.
