@@ -19,7 +19,7 @@
 </script>
 
 <header>
-	<h1>JSlauncher</h1>
+	<h1>JS-Launcher</h1>
 	<div>
 		<GameDisplay />
 	</div>
