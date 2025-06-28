@@ -60,7 +60,7 @@
 <div class="game-container">
 	<div id="intro" class="intro">
 		<p>
-			This is Minecraft running unmodified in the browser.
+			This is Minecraft running unmodified in websim.
 		</p>
 		<p>
 			Clicking the button below will start the game.
