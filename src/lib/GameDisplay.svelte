@@ -4,8 +4,8 @@
 
 	// --- Minecraft Launch Configuration ---
 
-	// Main Minecraft c0.0.19a client JAR
-	const pathJarMinecraft = "/app/1.5.2.jar"; 
+	// Main Minecraft client JAR
+	const pathJarMinecraft = "/app/b1.0.jar"; 
 
 	// LaunchWrapper main JAR
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
@@ -44,7 +44,7 @@
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
 			"--tweakClass", "net.minecraft.launchwrapper.VanillaTweaker",   
-			"--username", "CheerPJPlayer"        
+			"--username", "WebPlayer"        
 		);
 	}
 
