@@ -19,7 +19,7 @@
 </script>
 
 <header>
-	<h1>Beta 1.7.3</h1>
+	<h1>Alpha 1.1.1</h1>
 	<div>
 		<GameDisplay />
 	</div>
