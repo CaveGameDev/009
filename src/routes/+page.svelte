@@ -18,7 +18,8 @@
 </script>
 
 <header>
-	<h1>Alpha 1.0-1 (InfDev)</h1>
+	<h1>Alpha 1.0-2 (InfDev)</h1>
+        <h2>Both a1.0-1 and a1.0-2 are broken at this moment.<h2>
 	<div>
 		<GameDisplay />
 	</div>
