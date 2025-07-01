@@ -8,8 +8,7 @@
 		const share = document.getElementById("share");
 		const shareData = {
 			title: "JSlauncher",
-			text: "Minecraft Launcher",
-			url: "https://Beta-1.netlify.app/"
+			text: "Minecraft Launcher"
 		};
 		if (navigator.canShare?.(shareData)) {
 			share.addEventListener("click", () => navigator.share(shareData));
@@ -19,7 +18,7 @@
 </script>
 
 <header>
-	<h1>Beta 1.0</h1>
+	<h1>Alpha 1.0-1 (InfDev)</h1>
 	<div>
 		<GameDisplay />
 	</div>
