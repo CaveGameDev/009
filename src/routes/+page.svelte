@@ -9,7 +9,7 @@
 		const shareData = {
 			title: "JSlauncher",
 			text: "Minecraft Launcher",
-			url: "https://Beta-1.0,netlify.app/"
+			url: "https://Beta-1.0.netlify.app/"
 		};
 		if (navigator.canShare?.(shareData)) {
 			share.addEventListener("click", () => navigator.share(shareData));
