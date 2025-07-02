@@ -22,7 +22,8 @@
 		await cheerpjInit({
 			version: 8, // Set CheerpJ version to 8, suitable for Minecraft
 			javaProperties: ["java.library.path=/app/lwjgl/libraries/"], // Path to native DLLs
-			libraries: {"libGL.so.1": "/app/lwjgl/libraries/gl4es.wasm", "libopenal.so.1": "/app/lwjgl/libopenal.so.1"}
+			libraries: {"libGL.so.1": "/app/lwjgl/libraries/gl4es.wasm"}, 
+                                   {"libopenal.so.1": "/app/lwjgl/libopenal.so.1"}
 
 			enableX11:true,
 			// Preload resources for Java 8 runtime. These paths are typical for CheerpJ's internal structure.
