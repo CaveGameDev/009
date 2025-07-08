@@ -5,14 +5,9 @@
 	// --- Minecraft Launch Configuration ---
 
 	// Main Minecraft c0.0.19a client JAR
-	const pathJarMinecraft = "/app/CaveGame.jar"; 
 
-	// LaunchWrapper main JAR
 
-	// Combine all necessary JARs into the classpath for LaunchWrapper
-	// LWJGL, ASM, and JOpt Simple JARs are now included directly in the classpath string.
-	// Removed Log4j API and Core JARs to diagnose UnsatisfiedLinkError.
-	const pathJarLibs = `/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
+	const pathJarLibs = `/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:/app/Tech.jar`;
 
 	let display: HTMLDivElement;
 	let intro: HTMLDivElement;
