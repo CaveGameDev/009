@@ -7,7 +7,7 @@
 	// Main Minecraft c0.0.19a client JAR
 
 
-	const pathJarLibs = `/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:/app/Tech.jar`;
+	const pathJarLibs = `/app/Tech.jar:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:/app/Tech.jar`;
 
 	let display: HTMLDivElement;
 	let intro: HTMLDivElement;
@@ -32,8 +32,7 @@
 		await new Promise(resolve => setTimeout(resolve, 100)); // 100ms delay
 
 		tryPlausible("Play");
-		// Use net.minecraft.launchwrapper.Launch as the main class,
-		// and pass the tweakClass as a program argument.
+
 		await cheerpjRunMain(
 			"com.mojang.rubydung.Rubydung",
 			pathJarLibs, 
