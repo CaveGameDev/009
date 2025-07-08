@@ -19,7 +19,7 @@
 </script>
 
 <header>
-	<h1>pc-131137</h1>
+	<h1>Cave Game Tech Test</h1>
 	<div>
 		<GameDisplay />
 	</div>
