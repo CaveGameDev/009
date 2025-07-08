@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { tryPlausible, showElement, hideElement } from "./utilities";
 
-	const a = "/app/a1.2.0.jar"; 
+	const a = "/app/a1.2.6.jar"; 
 	const b = "/app/launchwrapper-1.6.jar";
 	const pathJarLibs = `${b}:/app/asm-all-4.1.jar:/app/jopt-simple-4.5.jar:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${a}`;
 
