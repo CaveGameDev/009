@@ -5,7 +5,7 @@
 	// --- Minecraft Launch Configuration ---
 
 	// Main Minecraft c0.0.19a client JAR
-	const pathJarMinecraft = "/app/pc-131137.jar"; 
+	const pathJarMinecraft = "/app/CaveGame.jar"; 
 
 	// LaunchWrapper main JAR
 
