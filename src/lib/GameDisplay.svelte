@@ -44,7 +44,7 @@ const pathJarLibs = `${pathJarLaunchWrapper}:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwj
 			"com.minedev.btabridge.BtaBridgeTweaker",
 			pathJarLibs,
 			"--minecraftJar", "/app/b1.7.3.jar",
-    			"--btaJar", "bta.jar",
+    			"--btaJar", "/app/bta.jar",
 			"--gamedir app/",
 			"--username", "WebPlayer"        
 		);
