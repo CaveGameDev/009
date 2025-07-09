@@ -20,7 +20,7 @@
 
 	async function startCheerpJ() {
 		await cheerpjInit({
-			version: 17, // Set CheerpJ version to 8, suitable for Minecraft
+			version: 8, // Set CheerpJ version to 8, suitable for Minecraft
 			javaProperties: ["java.library.path=/app/lwjgl/libraries/"], // Path to native DLLs
 			libraries: {"libGL.so.1": "/app/lwjgl/libraries/gl4es.wasm"},
 			enableX11:true,
