@@ -5,15 +5,15 @@
 	// --- Minecraft Launch Configuration ---
 
 	// Main Minecraft client JAR
-	const pathJarMinecraft = "/app/bta1.jar"; 
+	const pathJarMinecraft = "/app/b1.7.3.jar"; 
 
 	// LaunchWrapper main JAR
-	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
+	const pathJarLaunchWrapper = "/app/BtaBridgeTweaker.jar";
 
 	// Combine all necessary JARs into the classpath for LaunchWrapper
 	// LWJGL, ASM, and JOpt Simple JARs are now included directly in the classpath string.
 	// Removed Log4j API and Core JARs to diagnose UnsatisfiedLinkError.
-const pathJarLibs = `${pathJarLaunchWrapper}:/app/asm-all-4.1.jar:/app/jopt-simple-4.5.jar:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
+const pathJarLibs = `${pathJarLaunchWrapper}:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}:/app/bta.jar`;
 
 	let display: HTMLDivElement;
 	let intro: HTMLDivElement;
@@ -41,9 +41,8 @@ const pathJarLibs = `${pathJarLaunchWrapper}:/app/asm-all-4.1.jar:/app/jopt-simp
 		// Use net.minecraft.launchwrapper.Launch as the main class,
 
 		await cheerpjRunMain(
-			"net.minecraft.launchwrapper.Launch",
+			"com.minedev.btabridge.BtaBridgeTweaker",
 			pathJarLibs,
-			"--tweakClass", "net.minecraft.launchwrapper.VanillaTweaker",
 			"--gamedir app/",
 			"--username", "WebPlayer"        
 		);
