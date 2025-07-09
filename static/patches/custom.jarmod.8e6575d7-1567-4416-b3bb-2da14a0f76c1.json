@@ -1,0 +1,13 @@
+{
+    "formatVersion": 1,
+    "jarMods": [
+        {
+            "MMC-displayname": "IndustrialCraft_v8.55_02",
+            "MMC-filename": "8e6575d7-1567-4416-b3bb-2da14a0f76c1.jar",
+            "MMC-hint": "local",
+            "name": "custom.jarmods:8e6575d7-1567-4416-b3bb-2da14a0f76c1:1"
+        }
+    ],
+    "name": "IndustrialCraft_v8.55_02 (jar mod)",
+    "uid": "custom.jarmod.8e6575d7-1567-4416-b3bb-2da14a0f76c1"
+}

@@ -1,0 +1,13 @@
+{
+    "formatVersion": 1,
+    "jarMods": [
+        {
+            "MMC-displayname": "mod_Fossil",
+            "MMC-filename": "4af444e4-22b5-45bc-a962-f325e121e808.jar",
+            "MMC-hint": "local",
+            "name": "custom.jarmods:4af444e4-22b5-45bc-a962-f325e121e808:1"
+        }
+    ],
+    "name": "mod_Fossil (jar mod)",
+    "uid": "custom.jarmod.4af444e4-22b5-45bc-a962-f325e121e808"
+}

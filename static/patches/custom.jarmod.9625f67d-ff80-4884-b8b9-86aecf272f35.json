@@ -1,0 +1,13 @@
+{
+    "formatVersion": 1,
+    "jarMods": [
+        {
+            "MMC-displayname": "Aether 1.7.3 v1.02",
+            "MMC-filename": "9625f67d-ff80-4884-b8b9-86aecf272f35.jar",
+            "MMC-hint": "local",
+            "name": "custom.jarmods:9625f67d-ff80-4884-b8b9-86aecf272f35:1"
+        }
+    ],
+    "name": "Aether 1.7.3 v1.02 (jar mod)",
+    "uid": "custom.jarmod.9625f67d-ff80-4884-b8b9-86aecf272f35"
+}

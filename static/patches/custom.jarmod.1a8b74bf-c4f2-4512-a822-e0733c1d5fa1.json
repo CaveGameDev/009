@@ -1,0 +1,13 @@
+{
+    "formatVersion": 1,
+    "jarMods": [
+        {
+            "MMC-displayname": "minecraftforge-client-1.0.7-20110907",
+            "MMC-filename": "1a8b74bf-c4f2-4512-a822-e0733c1d5fa1.jar",
+            "MMC-hint": "local",
+            "name": "custom.jarmods:1a8b74bf-c4f2-4512-a822-e0733c1d5fa1:1"
+        }
+    ],
+    "name": "minecraftforge-client-1.0.7-20110907 (jar mod)",
+    "uid": "custom.jarmod.1a8b74bf-c4f2-4512-a822-e0733c1d5fa1"
+}

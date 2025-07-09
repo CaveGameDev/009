@@ -1,0 +1,13 @@
+{
+    "formatVersion": 1,
+    "jarMods": [
+        {
+            "MMC-displayname": "b1.7.3 HowManyItems v4.2.0",
+            "MMC-filename": "4d889d39-a0a1-44d5-b94d-f4f60a0e1a14.jar",
+            "MMC-hint": "local",
+            "name": "custom.jarmods:4d889d39-a0a1-44d5-b94d-f4f60a0e1a14:1"
+        }
+    ],
+    "name": "b1.7.3 HowManyItems v4.2.0 (jar mod)",
+    "uid": "custom.jarmod.4d889d39-a0a1-44d5-b94d-f4f60a0e1a14"
+}

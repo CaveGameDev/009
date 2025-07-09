@@ -1,0 +1,13 @@
+{
+    "formatVersion": 1,
+    "jarMods": [
+        {
+            "MMC-displayname": "unofficial_SDK_s Mods 1.7.3v1",
+            "MMC-filename": "ffb6e2fc-7b96-463d-9da8-112447ebaef9.jar",
+            "MMC-hint": "local",
+            "name": "custom.jarmods:ffb6e2fc-7b96-463d-9da8-112447ebaef9:1"
+        }
+    ],
+    "name": "unofficial_SDK_s Mods 1.7.3v1 (jar mod)",
+    "uid": "custom.jarmod.ffb6e2fc-7b96-463d-9da8-112447ebaef9"
+}

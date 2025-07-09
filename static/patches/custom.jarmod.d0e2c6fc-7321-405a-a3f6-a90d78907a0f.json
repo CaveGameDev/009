@@ -1,0 +1,13 @@
+{
+    "formatVersion": 1,
+    "jarMods": [
+        {
+            "MMC-displayname": "BitDepthFix 1.7.3 ",
+            "MMC-filename": "d0e2c6fc-7321-405a-a3f6-a90d78907a0f.jar",
+            "MMC-hint": "local",
+            "name": "custom.jarmods:d0e2c6fc-7321-405a-a3f6-a90d78907a0f:1"
+        }
+    ],
+    "name": "BitDepthFix 1.7.3  (jar mod)",
+    "uid": "custom.jarmod.d0e2c6fc-7321-405a-a3f6-a90d78907a0f"
+}
