@@ -13,7 +13,7 @@
 	// Combine all necessary JARs into the classpath for LaunchWrapper
 	// LWJGL, ASM, and JOpt Simple JARs are now included directly in the classpath string.
 	// Removed Log4j API and Core JARs to diagnose UnsatisfiedLinkError.
-	const pathJarLibs = `${pathJarLaunchWrapper}:/app/asm-all-4.1.jar:/app/jopt-simple-4.5.jar:/app/lwjgl/lwjgl.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}/app/b1.7.3.jar`;
+	const pathJarLibs = `${pathJarLaunchWrapper}:/app/asm-all-4.1.jar:/app/jopt-simple-4.5.jar:/app/lwjgl/lwjgl.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}:/app/b1.7.3.jar`;
 
 	let display: HTMLDivElement;
 	let intro: HTMLDivElement;
@@ -39,7 +39,7 @@
 
 		tryPlausible("Play");
 		// Use net.minecraft.launchwrapper.Launch as the main class,
-		// and pass the tweakClass as a program argument.
+
 		await cheerpjRunMain(
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
