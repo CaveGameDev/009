@@ -44,6 +44,7 @@
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
 			"--tweakClass", "net.minecraft.launchwrapper.VanillaTweaker",   
+			"--gamedir /app/minecraft"
 			"--username", "WebPlayer"        
 		);
 	}
