@@ -1,0 +1,118 @@
+Jul 09, 2025 2:45:51 AM ModLoader init
+FINE: ModLoader Beta 1.7.3 Initializing...
+Jul 09, 2025 2:45:51 AM ModLoader readFromClassPath
+FINER: Adding mods from C:\Users\david\AppData\Roaming\PrismLauncher\instances\miod\minecraft\bin\minecraft.jar
+Jul 09, 2025 2:45:51 AM ModLoader readFromClassPath
+FINER: Zip found.
+Jul 09, 2025 2:45:51 AM ModLoader addMod
+FINE: Mod Loaded: "mod_HowManyItems v4.2.0" from mod_HowManyItems.class
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Fern01_d.png,30). 82 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Fern02_d.png,54). 81 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Fern03_d.png,76). 80 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Fern04_d.png,77). 79 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Fern05_d.png,78). 78 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Fern06_d.png,85). 77 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Fern05_u.png,100). 76 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Fern06_u.png,101). 75 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/skull1.png,111). 74 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/skull2.png,125). 73 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/skull3.png,126). 72 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/skull4.png,127). 71 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/DumpSide.png,136). 70 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/DumpTop_Follow.png,137). 69 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/DumpTop_FreeMove.png,138). 68 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/DumpTop_Stay.png,139). 67 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/afm_side.png,141). 66 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/afm_front.png,142). 65 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/afm_on.png,143). 64 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/afm_off.png,148). 63 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Analyzer_side.png,153). 62 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Analyzer_top.png,154). 61 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Analyzer_on.png,155). 60 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Analyzer_off.png,156). 59 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Cultivate_top.png,157). 58 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Cultivate_side_on.png,158). 57 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/Cultivate_side_off.png,159). 56 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/table_on.png,166). 55 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/table_off.png,167). 54 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/table_side1.png,168). 53 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/table_side2.png,169). 52 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/DNA1.png,38). 129 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/DNA2.png,46). 128 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/DNA3.png,61). 127 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/egg1.png,62). 126 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/egg2.png,91). 125 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/egg3.png,101). 124 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/terrain.png,/skull/cr.png,170). 51 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/BioFossil.png,102). 123 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/Relic.png,105). 122 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/StoneBoard.png,106). 121 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/Broken_Sword.png,107). 120 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/Ancient_sword.png,108). 119 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/FernSeed.png,109). 118 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/Broken_Helmet.png,117). 117 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/Ancient_Halmet.png,118). 116 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/SkullStick.png,119). 115 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/Gen.png,120). 114 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/GenAxe.png,121). 113 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/GenPickaxe.png,122). 112 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/GenSword.png,123). 111 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/GenHoe.png,124). 110 left.
+Jul 09, 2025 2:45:51 AM ModLoader addOverride
+FINER: addOverride(/gui/items.png,/skull/GenShave.png,125). 109 left.
+Jul 09, 2025 2:45:51 AM ModLoader addMod
+FINE: Mod Loaded: "mod_Fossil Mod FOSSIL / ARCHEOLOGY v4.3 Engaged" from mod_Fossil.class
+Jul 09, 2025 2:45:51 AM ModLoader AddAllRenderers
+FINE: Initialized
