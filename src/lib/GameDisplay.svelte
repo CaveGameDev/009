@@ -5,10 +5,10 @@
 	// --- Minecraft Launch Configuration ---
 
 	// Main Minecraft client JAR
-	const pathJarMinecraft = "/app/bta.jar"; 
+	const pathJarMinecraft = "/app/b1.7.3.jar"; 
 
 	// LaunchWrapper main JAR
-	const pathJarLaunchWrapper = "/app/BtaBridgeTweakerV2.jar";
+	const pathJarLaunchWrapper = "/app/bta.jar";
 
 	// Combine all necessary JARs into the classpath for LaunchWrapper
 	// LWJGL, ASM, and JOpt Simple JARs are now included directly in the classpath string.
