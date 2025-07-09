@@ -8,7 +8,7 @@
 	const pathJarMinecraft = "/app/b1.7.3.jar"; 
 
 	// LaunchWrapper main JAR
-	const pathJarLaunchWrapper = "/app/BtaBridgeTweaker.jar";
+	const pathJarLaunchWrapper = "/app/BtaBridgeTweakerV2.jar";
 
 	// Combine all necessary JARs into the classpath for LaunchWrapper
 	// LWJGL, ASM, and JOpt Simple JARs are now included directly in the classpath string.
