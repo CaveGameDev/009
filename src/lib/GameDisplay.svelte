@@ -13,7 +13,7 @@
 	// Combine all necessary JARs into the classpath for LaunchWrapper
 	// LWJGL, ASM, and JOpt Simple JARs are now included directly in the classpath string.
 	// Removed Log4j API and Core JARs to diagnose UnsatisfiedLinkError.
-const pathJarLibs = `${pathJarLaunchWrapper}:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:/app/b1.7.3.jar:${pathJarMinecraft}`;
+const pathJarLibs = `${pathJarLaunchWrapper}:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:/app/b1.7.3.jar:/app/bta.jar`;
 
 	let display: HTMLDivElement;
 	let intro: HTMLDivElement;
@@ -43,9 +43,7 @@ const pathJarLibs = `${pathJarLaunchWrapper}:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwj
 		await cheerpjRunMain(
 			"net.minecraft.client.Minecraft",
 			pathJarLibs,    			
-			"--btaJar", "/app/bta.jar",
-			"--minecraftJar", "/app/b1.7.3.jar",
-			"--gamedir app/",
+			"--gamedir /app/",
 			"--username", "WebPlayer"        
 		);
 	}
