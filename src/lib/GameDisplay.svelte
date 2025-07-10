@@ -43,6 +43,7 @@
 		await cheerpjRunMain(
 			"net.minecraft.client.Minecraft",
 			pathJarLibs,
+			"-Djava.util.Arrays.useLegacyMergeSort=true",
 			"--username", "WebPlayer"        
 		);
 	}
