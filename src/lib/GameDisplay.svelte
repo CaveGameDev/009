@@ -43,6 +43,7 @@
 		await cheerpjRunMain(
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
+			"--gamedir .",
 			"--tweakClass", "net.minecraft.launchwrapper.VanillaTweaker",   
 			"--username", "WebPlayer"        
 		);
