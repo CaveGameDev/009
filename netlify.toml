@@ -1,0 +1,7 @@
+# netlify.toml
+
+[[redirects]]
+  from = "/minecraftapi/*"
+  to = "https://api.minecraftservices.com/minecraft/:splat"
+  status = 200
+  force = true # Ensures the redirect happens even if a file exists at the source path
