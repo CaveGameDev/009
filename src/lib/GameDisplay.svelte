@@ -47,7 +47,7 @@
 		await cheerpjRunMain(
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
-			"--tweakClass", "net.minecraft.launchwrapper.AlphaVanillaTweaker",   
+			"--tweakClass", "net.minecraft.launchwrapper.IndevVanillaTweaker",   
 			"--username", "WebPlayer",
 		        "--gameDir app/assets",
                         "--assetsDir app/assets"
