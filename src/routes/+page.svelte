@@ -19,7 +19,7 @@
 </script>
 
 <header>
-	<h1>Classic+</h1>
+	<h1>Indev+</h1>
 	<div>
 		<GameDisplay />
 	</div>
