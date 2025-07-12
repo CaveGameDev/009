@@ -19,7 +19,7 @@
 </script>
 
 <header>
-	<h1>PreClassic</h1>
+	<h1>CaveGame-TechDemo</h1>
 	<div>
 		<GameDisplay />
 	</div>
