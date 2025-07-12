@@ -38,6 +38,8 @@
 		await new Promise(resolve => setTimeout(resolve, 100)); // 100ms delay
 
 		tryPlausible("Play");
+		//
+		//
 		await cheerpjRunMain(
 			"net.minecraft.Launchwrapper.Launch",
 			pathJarLibs,
