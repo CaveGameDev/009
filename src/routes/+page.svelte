@@ -19,7 +19,7 @@
 </script>
 
 <header>
-	<h1>c0.0.13a (DevBuild/Launcher)</h1>
+	<h1>Classic</h1>
 	<div>
 		<GameDisplay />
 	</div>
