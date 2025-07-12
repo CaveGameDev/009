@@ -5,7 +5,7 @@
 	// --- Minecraft Launch Configuration ---
 
 	// Main Minecraft client JAR
-	const pathJarMinecraft = "/app/IndevPlus.jar"; 
+	const pathJarMinecraft = "/app/Indev Plus.jar"; 
 
 	// LaunchWrapper main JAR
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
@@ -44,7 +44,7 @@
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
 			"--gamedir .",
-			"--tweakClass", "net.minecraft.launchwrapper.IndevVanillaTweaker"  
+			"--tweakClass", "net.minecraft.launchwrapper.AlphaVanillaTweaker"  
 		);
 	}
 
