@@ -5,7 +5,7 @@
 	// --- Minecraft Launch Configuration ---
 
 	// Main Minecraft client JAR
-	const pathJarMinecraft = "/app/Classic Plus.jar"; 
+	const pathJarMinecraft = "/app/c0.0.15a.jar"; 
 
 	// LaunchWrapper main JAR
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
@@ -41,9 +41,10 @@
 		// Use net.minecraft.launchwrapper.Launch as the main class,
 		// and pass the tweakClass as a program argument.
 		await cheerpjRunMain(
-			"com.mojang.minecraft.Minecraft",
+			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
-			"--username", "MineDeVPlayer"        
+			"--tweakClass", "net.minecraft.launchwrapper.AlphaVanillaTweaker",   
+			"--username", "WebPlayer"      
 		);
 	}
 
