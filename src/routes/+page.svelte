@@ -19,7 +19,7 @@
 </script>
 
 <header>
-	<h1>CaveGame-TechDemo</h1>
+	<h1>rd-131648</h1>
 	<div>
 		<GameDisplay />
 	</div>
