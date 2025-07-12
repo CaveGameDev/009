@@ -19,7 +19,7 @@
 </script>
 
 <header>
-	<h1>Beta 1.8.1</h1>
+	<h1>INDEV-20091223-2</h1>
 	<div>
 		<GameDisplay />
 	</div>
