@@ -5,7 +5,7 @@
 	// --- Minecraft Launch Configuration ---
 
 	// Main Minecraft client JAR
-	const pathJarMinecraft = "/app/b1.8.1.jar"; 
+	const pathJarMinecraft = "/app/in-20091223-2.jar"; 
 
 	// LaunchWrapper main JAR
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
@@ -43,7 +43,7 @@
 		await cheerpjRunMain(
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
-			"--tweakClass", "net.minecraft.launchwrapper.VanillaTweaker",   
+			"--tweakClass", "net.minecraft.launchwrapper.AlphaVanillaTweaker",   
 			"--username", "WebPlayer"        
 		);
 	}
