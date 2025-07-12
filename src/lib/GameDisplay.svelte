@@ -43,8 +43,9 @@
 		await cheerpjRunMain(
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
+			"--username, MineDeVdemo"
 			"--gamedir .",
-			"--tweakClass", "net.minecraft.launchwrapper.AlphaVanillaTweaker"  
+			"--tweakClass", "net.minecraft.launchwrapper.AlphaVanillaTweaker" 
 		);
 	}
 
