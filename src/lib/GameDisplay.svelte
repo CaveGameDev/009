@@ -43,7 +43,6 @@
 			pathJarLibs,
 			"--gamedir .",
 			"--tweakClass", "net.minecraft.launchwrapper.IndevVanillaTweaker"  
-		//Username Auth Impossible in current dev state  
 		);
 	}
 
