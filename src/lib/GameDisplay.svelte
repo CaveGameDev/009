@@ -38,12 +38,9 @@
 		await new Promise(resolve => setTimeout(resolve, 100)); // 100ms delay
 
 		tryPlausible("Play");
-		// Use net.minecraft.launchwrapper.Launch as the main class,
-		// and pass the tweakClass as a program argument.
 		await cheerpjRunMain(
-			"com.mojang.minecraft.Minecraft",
-			pathJarLibs,
-			"--username", "WebPlayer"        
+			"com.mojang.minecraft.Minecraft"
+		//Username Auth Impossible in current dev state  
 		);
 	}
 
