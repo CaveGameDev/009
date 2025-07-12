@@ -19,7 +19,7 @@
 </script>
 
 <header>
-	<h1>Alpha 1.0.1 (Previously lost)</h1>
+	<h1>ClassicPlus</h1>
 	<div>
 		<GameDisplay />
 	</div>
