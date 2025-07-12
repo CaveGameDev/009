@@ -43,7 +43,7 @@
 		await cheerpjRunMain(
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
-			"--username, JSMD-Player",
+			"JSMD-Player",
 			"--gamedir .",
 			"--tweakClass", "net.minecraft.launchwrapper.AlphaVanillaTweaker" 
 		);
