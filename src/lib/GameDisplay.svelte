@@ -43,7 +43,7 @@
 		await cheerpjRunMain(
 			"com.mojang.minecraft.Minecraft",
 			pathJarLibs,
-			"--username", "WebPlayer"        
+			"--username", "MineDeVPlayer"        
 		);
 	}
 
