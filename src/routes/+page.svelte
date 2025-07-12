@@ -19,7 +19,7 @@
 </script>
 
 <header>
-	<h1>ClassicPlus</h1>
+	<h1>Classic+</h1>
 	<div>
 		<GameDisplay />
 	</div>
