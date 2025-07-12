@@ -5,7 +5,7 @@
 	// --- Minecraft Launch Configuration ---
 
 	// Main Minecraft client JAR
-	const pathJarMinecraft = "/app/st.jar"; 
+	const pathJarMinecraft = "/app/stFix.jar"; 
 
 	// LaunchWrapper main JAR
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
