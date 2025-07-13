@@ -7,8 +7,6 @@
 	// Main Minecraft client JAR
 	const pathJarMinecraft = "/app/b1.6.4.jar"; 
 
-	const NICK = "default";
-
 	// LaunchWrapper main JAR
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
 
@@ -54,7 +52,7 @@
 			"--userProperties={}" ,
 			"--versionType release",
 			"--uuid 00000000000000000000000000000000", 
-			"--username %NICK%"
+			"--username default"
 
 		);
 	}
