@@ -7,9 +7,9 @@
 	// Main Minecraft client JAR
 	const pathJarMinecraft = "/app/b1.6.4.jar"; 
 
-	const NICK = "default";'
+	const NICK = "default";
 
-	const UUID = "00000000000000000000000000000000";'
+	const UUID = "00000000000000000000000000000000";
 
 
 	// LaunchWrapper main JAR
