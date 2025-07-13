@@ -9,7 +9,7 @@
 
 	const NICK = "default";'
 
-	const UUID = "00000000000000000000000000000000";
+	const UUID = "00000000000000000000000000000000";'
 
 
 	// LaunchWrapper main JAR
