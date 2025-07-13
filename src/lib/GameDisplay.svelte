@@ -45,7 +45,7 @@
 		// Use net.minecraft.launchwrapper.Launch as the main class,
 		// and pass the tweakClass as a program argument.
 		await cheerpjRunMain(
-			"com.mojang.rubydung.RubyDung",
+			"com.mojang.minecraft.RubyDung",
 			pathJarLibs,
 			"--username", "WebPlayer",
 		);
