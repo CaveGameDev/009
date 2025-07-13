@@ -9,9 +9,6 @@
 
 	const NICK = "default";
 
-	const UUID = "00000000000000000000000000000000";
-
-
 	// LaunchWrapper main JAR
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
 
@@ -56,7 +53,7 @@
 			"--userType legacy" ,
 			"--userProperties={}" ,
 			"--versionType release",
-			"--uuid %uuid%", 
+			"--uuid 00000000000000000000000000000000", 
 			"--username %NICK%"
 
 		);
