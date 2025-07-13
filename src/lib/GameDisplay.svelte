@@ -7,6 +7,11 @@
 	// Main Minecraft client JAR
 	const pathJarMinecraft = "/app/b1.6.4.jar"; 
 
+	const NICK = "default";'
+
+	const UUID = "00000000000000000000000000000000";
+
+
 	// LaunchWrapper main JAR
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
 
@@ -38,13 +43,22 @@
 		await new Promise(resolve => setTimeout(resolve, 100)); // 100ms delay
 
 		tryPlausible("Play");
-		// Use net.minecraft.launchwrapper.Launch as the main class,
-		// and pass the tweakClass as a program argument.
+		//
+		//
 		await cheerpjRunMain(
 			"net.minecraft.client.main.Main",
 			pathJarLibs,
-			"--tweakClass", "net.minecraft.launchwrapper.VanillaTweaker",   
-			"--username", "WebPlayer"        
+			"--version 1.7.10",
+			"--gameDir .",
+			"--assetsDir assets" 
+			"--assetIndex 1.7",
+			"--accessToken 1337535510N",
+			"--userType legacy" ,
+			"--userProperties={}" ,
+			"--versionType release",
+			"--uuid %uuid%", 
+			"--username %NICK%"
+
 		);
 	}
 
