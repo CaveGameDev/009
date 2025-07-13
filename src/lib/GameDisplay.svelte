@@ -47,16 +47,16 @@
 		await cheerpjRunMain(
 			"net.minecraft.client.main.Main",
 			pathJarLibs,
-			"--version 1.7.10",
-			"--gameDir .",
-			"--assetsDir assets", // Added comma here
-			"--assetIndex 1.7",
-			"--accessToken 1337535510N",
-			"--userType legacy" ,
-			"--userProperties={}" ,
-			"--versionType release",
-			`--uuid ${UUID}`, // Used UUID variable
-			`--username ${NICK}` // Used NICK variable
+			"--version", "1.7.10", // Changed: Flag and value are now separate arguments
+			"--gameDir", ".",      // Changed: Flag and value are now separate arguments
+			"--assetsDir", "assets", // Changed: Flag and value are now separate arguments
+			"--assetIndex", "1.7",   // Changed: Flag and value are now separate arguments
+			"--accessToken", "1337535510N", // Changed: Flag and value are now separate arguments
+			"--userType", "legacy" , // Changed: Flag and value are now separate arguments
+			"--userProperties", "{}" , // Changed: Flag and value are now separate arguments
+			"--versionType", "release", // Changed: Flag and value are now separate arguments
+			`--uuid`, UUID, // Changed: Flag and value are now separate arguments
+			`--username`, NICK // Changed: Flag and value are now separate arguments
 		);
 	}
 
