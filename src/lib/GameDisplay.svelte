@@ -49,7 +49,7 @@
 			pathJarLibs,
 			"--version", "1.7.10", // Changed: Flag and value are now separate arguments
 			"--gameDir", ".",      // Changed: Flag and value are now separate arguments
-			"--assetsDir", "assets", // Changed: Flag and value are now separate arguments
+			"--assetsDir", "/app/assets", // Changed: Flag and value are now separate arguments
 			"--assetIndex", "1.7",   // Changed: Flag and value are now separate arguments
 			"--accessToken", "1337535510N", // Changed: Flag and value are now separate arguments
 			"--userType", "legacy" , // Changed: Flag and value are now separate arguments
