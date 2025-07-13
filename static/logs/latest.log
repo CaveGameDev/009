@@ -1,0 +1,28 @@
+[18:15:31] [main/INFO]: Setting user: default
+[18:15:31] [main/INFO]: (Session ID is token:1337535510N:00000000000000000000000000000000)
+[18:15:31] [Client thread/INFO]: LWJGL Version: 2.9.1
+[18:15:32] [Client thread/ERROR]: Couldn't initialize twitch stream
+[18:15:32] [Client thread/INFO]: Reloading ResourceManager: Default
+[18:15:32] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[18:15:32] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[18:15:32] [Sound Library Loader/INFO]: Sound engine started
+[18:15:56] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[18:15:56] [Server thread/INFO]: Generating keypair
+[18:15:56] [Server thread/INFO]: Converting map!
+[18:15:56] [Server thread/INFO]: Scanning folders...
+[18:15:56] [Server thread/INFO]: Total conversion count is 0
+[18:15:56] [Server thread/INFO]: Preparing start region for level 0
+[18:15:57] [Server thread/INFO]: Preparing spawn area: 40%
+[18:15:58] [Server thread/INFO]: Preparing spawn area: 86%
+[18:15:59] [Server thread/INFO]: Changing view distance to 8, from 10
+[18:15:59] [Server thread/INFO]: default[local:E:83c49307] logged in with entity id 249 at (-22.5, 67.0, 254.5)
+[18:15:59] [Server thread/INFO]: default joined the game
+[18:16:01] [Server thread/INFO]: default has just earned the achievement [Taking Inventory]
+[18:16:01] [Client thread/INFO]: [CHAT] default has just earned the achievement [Taking Inventory]
+[18:17:18] [Client thread/INFO]: Stopping!
+[18:17:18] [Server thread/INFO]: Stopping server
+[18:17:18] [Server thread/INFO]: Saving players
+[18:17:18] [Server thread/INFO]: Saving worlds
+[18:17:18] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[18:17:18] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[18:17:18] [Server thread/INFO]: Saving chunks for level 'New World'/The End
