@@ -5,7 +5,7 @@
 	// --- Minecraft Launch Configuration ---
 
 	// Main Minecraft client JAR
-	const pathJarMinecraft = "/app/b1.7.3.jar"; 
+	const pathJarMinecraft = "/app/Back2Beta.jar"; 
 
 	// LaunchWrapper main JAR
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
