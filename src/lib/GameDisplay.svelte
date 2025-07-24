@@ -14,7 +14,7 @@
 	// Combine all necessary JARs into the classpath for LaunchWrapper.
 	// The pathJarMinecraft is included here, which will point to the JAR
 	// that is assumed to be pre-existing in CheerpJ's virtual file system.
-	const pathJarLibs = `${pathJarLaunchWrapper}:/app/asm-all-4.1.jar:/app/jopt-simple-4.5.jar:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
+	const pathJarLibs = `/app/asm-all-4.1.jar:/app/jopt-simple-4.5.jar:/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
 
 	// DOM element references
 	let display: HTMLDivElement;
@@ -61,9 +61,8 @@
 		// Use net.minecraft.launchwrapper.Launch as the main class,
 		// and pass the tweakClass as a program argument.
 		await cheerpjRunMain(
-			"net.minecraft.launchwrapper.Launch",
+			"com.mojang.minecraft.d",
 			pathJarLibs,
-			"--tweakClass", "net.minecraft.launchwrapper.IndevVanillaTweaker",
 			"--username", "WebPlayer"
 		);
 	}
