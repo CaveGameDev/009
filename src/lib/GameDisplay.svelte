@@ -61,7 +61,7 @@
 		// Use net.minecraft.launchwrapper.Launch as the main class,
 		// and pass the tweakClass as a program argument.
 		await cheerpjRunMain(
-			"com.mojang.minecraft.d",
+			"com.mojang.minecraft.MinecraftApplet",
 			pathJarLibs,
 			"--username", "WebPlayer"
 		);
