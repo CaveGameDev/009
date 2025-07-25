@@ -63,7 +63,7 @@
 		await cheerpjRunMain(
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
-			"tweakclass," "net.minecraft.launchwrapper.AlphaVanillaTweaker"
+			"tweakclass," "net.minecraft.launchwrapper.AlphaVanillaTweaker",
 			"--username", "WebPlayer"
 		);
 	}
