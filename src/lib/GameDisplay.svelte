@@ -6,7 +6,7 @@
 
 	// Main Minecraft client JAR - This path is within CheerpJ's virtual file system.
 	// It is assumed this JAR is already available at this path.
-	const pathJarMinecraft = "/app/MODINF.jar";
+	const pathJarMinecraft = "/app/First InfDev.jar";
 
 	// LaunchWrapper main JAR
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
@@ -31,35 +31,28 @@
 			enableX11:true, // Enable X11 for graphical output
 			networkHooks: [
 				{
-					// Original hook for skins - keep this if placeholder is desired
+					// Match requests to minecraft.net/skins/ followed by anything
 					match: /^http:\/\/minecraft\.net\/skins\/(.*)$/,
+					// Redirect to a placeholder image URL.
+					// This will be served whenever the game tries to fetch a skin from the old URL.
 					replace: "https://placehold.co/64x64/000000/FFFFFF/png?text=SKIN"
 				},
+				// *** ADD THESE MISSING HOOKS ***
 				{
-					// *** NEW HOOK for /resources/ ***
-					// This redirects requests for https://www.minecraft.net/resources/
-					// to a specific path on your OWN site, e.g., /static/old_minecraft_assets/resources.txt
-					// Make sure the file exists at this path in your Netlify deployment!
+					// Hook for the /resources/ URL
+					// This will redirect to a file on your Netlify site.
+					// MAKE SURE this file exists at /static/old_minecraft_assets/resources.txt
 					match: /^https:\/\/www\.minecraft\.net\/resources\/$/,
-					replace: "/static/old_minecraft_assets/resources.txt" // <-- Adjust this path to your actual file location
+					replace: "/static/old_minecraft_assets/resources.txt"
 				},
 				{
-					// *** NEW HOOK for /game/ with specific query parameters ***
-					// This redirects requests for https://www.minecraft.net/game/?n=--username&i=WebPlayer
-					// to a specific path on your OWN site, e.g., /static/old_minecraft_assets/game_webplayer.html
-					// The regex needs to be precise to match only this specific URL.
+					// Hook for the /game/ URL with specific query parameters
+					// This will redirect to a file on your Netlify site.
+					// MAKE SURE this file exists at /static/old_minecraft_assets/game_webplayer.html
 					match: /^https:\/\/www\.minecraft\.net\/game\/\?n=--username&i=WebPlayer$/,
-					replace: "/static/old_minecraft_assets/game_webplayer.html" // <-- Adjust this path to your actual file location
+					replace: "/static/old_minecraft_assets/game_webplayer.html"
 				}
-				// Add more hooks here if other minecraft.net URLs appear in errors
-				// For example, if it tries to fetch something like /assets/sound.ogg
-				// {
-				// 	match: /^https:\/\/www\.minecraft\.net\/assets\/(.*)$/,
-				// 	replace: (urlMatch: RegExpMatchArray) => {
-				// 		const assetPath = urlMatch[1];
-				// 		return `/static/old_minecraft_assets/assets/${assetPath}`;
-				// 	}
-				// }
+				// END OF ADDED HOOKS
 			],
 			// Preload resources for Java 8 runtime. These paths are typical for CheerpJ's internal structure.
 			// This helps in faster startup by pre-fetching common Java runtime components.
