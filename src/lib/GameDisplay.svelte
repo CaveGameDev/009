@@ -38,6 +38,7 @@
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
 			"--username", "WebPlayer",
+			"==session", "0",
 			"--tweakClass", "net.minecraft.launchwrapper.AlphaVanillaTweaker"
 		);
 	}
