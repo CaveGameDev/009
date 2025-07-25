@@ -6,7 +6,7 @@
 
 	// Main Minecraft client JAR - This path is within CheerpJ's virtual file system.
 	// It is assumed this JAR is already available at this path.
-	const pathJarMinecraft = "/app/First InfDev.jar";
+	const pathJarMinecraft = "/app/MODINF.jar";
 
 	// LaunchWrapper main JAR
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
