@@ -21,7 +21,7 @@
 	let intro: HTMLDivElement;
 
 	/**
-	 * Initializes CheerpJ and sets up network hooks for skin redirection.
+	 * Initializes CheerpJ and sets up network hooks for redirection.
 	 */
 	async function startCheerpJ() {
 		await cheerpjInit({
@@ -29,15 +29,37 @@
 			javaProperties: ["java.library.path=/app/lwjgl/libraries/"], // Path to native DLLs
 			libraries: {"libGL.so.1": "/app/lwjgl/libraries/gl4es.wasm"}, // WebAssembly library for OpenGL
 			enableX11:true, // Enable X11 for graphical output
-			// Add networkHooks to redirect skin requests
 			networkHooks: [
 				{
-					// Match requests to minecraft.net/skins/ followed by anything
+					// Original hook for skins - keep this if placeholder is desired
 					match: /^http:\/\/minecraft\.net\/skins\/(.*)$/,
-					// Redirect to a placeholder image URL.
-					// This will be served whenever the game tries to fetch a skin from the old URL.
 					replace: "https://placehold.co/64x64/000000/FFFFFF/png?text=SKIN"
+				},
+				{
+					// *** NEW HOOK for /resources/ ***
+					// This redirects requests for https://www.minecraft.net/resources/
+					// to a specific path on your OWN site, e.g., /static/old_minecraft_assets/resources.txt
+					// Make sure the file exists at this path in your Netlify deployment!
+					match: /^https:\/\/www\.minecraft\.net\/resources\/$/,
+					replace: "/static/old_minecraft_assets/resources.txt" // <-- Adjust this path to your actual file location
+				},
+				{
+					// *** NEW HOOK for /game/ with specific query parameters ***
+					// This redirects requests for https://www.minecraft.net/game/?n=--username&i=WebPlayer
+					// to a specific path on your OWN site, e.g., /static/old_minecraft_assets/game_webplayer.html
+					// The regex needs to be precise to match only this specific URL.
+					match: /^https:\/\/www\.minecraft\.net\/game\/\?n=--username&i=WebPlayer$/,
+					replace: "/static/old_minecraft_assets/game_webplayer.html" // <-- Adjust this path to your actual file location
 				}
+				// Add more hooks here if other minecraft.net URLs appear in errors
+				// For example, if it tries to fetch something like /assets/sound.ogg
+				// {
+				// 	match: /^https:\/\/www\.minecraft\.net\/assets\/(.*)$/,
+				// 	replace: (urlMatch: RegExpMatchArray) => {
+				// 		const assetPath = urlMatch[1];
+				// 		return `/static/old_minecraft_assets/assets/${assetPath}`;
+				// 	}
+				// }
 			],
 			// Preload resources for Java 8 runtime. These paths are typical for CheerpJ's internal structure.
 			// This helps in faster startup by pre-fetching common Java runtime components.
@@ -64,7 +86,7 @@
 			"net.minecraft.launchwrapper.Launch",
 			pathJarLibs,
 			"--username", "WebPlayer",
-			"--tweakClass", "net.minecraft.launchwrapper.AlphaVanillaTweaker" 
+			"--tweakClass", "net.minecraft.launchwrapper.AlphaVanillaTweaker"
 		);
 	}
 
