@@ -1,16 +1,16 @@
-// This file is your Service Worker. It intercepts network requests.
+// static/sw.js
 
 // Name for your cache storage. Increment this number when you change which files are cached.
-const CACHE_NAME = 'minecraft-old-assets-v2'; // Increased version for this fresh start
+const CACHE_NAME = 'minecraft-old-assets-v3'; // Increased version for a fresh start with all rules
 
 // List of static files that the Service Worker should immediately try to cache upon installation.
 // These are the *local paths* on your Netlify site.
 const urlsToPrecache = [
-    '/static/old_minecraft_assets/resources_response.txt', // This file will pretend to be the /resources/ folder response
-    '/static/old_minecraft_assets/game_response.txt'      // This file will pretend to be the /game/ response
+    '/static/old_minecraft_assets/game_response.txt',       // For the /game/ endpoint
+    '/static/old_minecraft_assets/resources_response.txt',  // For the /resources/ endpoint
+    '/static/old_minecraft_assets/play_response.txt',       // For the /play.jsp endpoint (if used)
+    '/static/old_minecraft_assets/skins/WebPlayer.png',     // For the player skin
     // Add any other specific assets the old Minecraft client might request directly from minecraft.net
-    // For example, if it tries to load 'https://www.minecraft.net/images/terrain.png', you'd add:
-    // '/static/old_minecraft_assets/images/terrain.png' (assuming you have that file)
 ];
 
 // Event: 'install'
@@ -25,6 +25,8 @@ self.addEventListener('install', (event) => {
             })
             .catch((error) => {
                 console.error('[Service Worker] Pre-caching failed:', error);
+                // Important: If a precache fails, it will prevent the SW from installing.
+                // Check browser console for network errors on these paths.
             })
     );
 });
@@ -56,43 +58,32 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
     const requestUrl = new URL(event.request.url);
 
-    // --- Intercept specific minecraft.net URLs and redirect to your local files ---
+    // --- DEBUGGING START ---
+    // These logs will appear in the Service Worker's dedicated console window (Application -> Service Workers -> click sw.js)
+    console.groupCollapsed(`[Service Worker] Intercepting fetch: ${event.request.url}`);
+    console.log('  Origin:', requestUrl.origin);
+    console.log('  Pathname:', requestUrl.pathname);
+    console.log('  Search:', requestUrl.search);
+    console.log('  Method:', event.request.method);
+    console.groupEnd();
+    // --- DEBUGGING END ---
 
-    // 1. Intercept 'https://www.minecraft.net/resources/'
-    // This is the problematic 'folder' request.
-    // Ensure the match is exact for the request you see failing in your network tab.
-    if (requestUrl.origin === 'https://www.minecraft.net' && requestUrl.pathname === '/resources/' && requestUrl.search === '') {
-        console.log(`[Service Worker] Intercepting ${event.request.url} -> serving local /static/old_minecraft_assets/resources_response.txt`);
-        event.respondWith(
-            caches.match('/static/old_minecraft_assets/resources_response.txt') // Try to get from cache first
-                .then(cachedResponse => {
-                    if (cachedResponse) {
-                        return cachedResponse;
-                    }
-                    // If not in cache, fetch from your local Netlify server path
-                    return fetch('/static/old_minecraft_assets/resources_response.txt');
-                })
-                .catch(error => {
-                    console.error('[Service Worker] Failed to serve local resources_response.txt:', error);
-                    // Return a generic error response if your local file cannot be served
-                    return new Response('Failed to load resources response from local cache or server', { status: 500 });
-                })
-        );
-        return; // IMPORTANT: Stop processing this event, we've handled it.
-    }
 
-    // 2. Intercept 'https://www.minecraft.net/game/?n=--username&i=WebPlayer'
-    // This is the problematic 'dynamic' request.
-    // Ensure the match is exact for the request you see failing in your network tab.
-    if (requestUrl.origin === 'https://www.minecraft.net' && requestUrl.pathname === '/game/' && requestUrl.search === '?n=--username&i=WebPlayer') {
-        console.log(`[Service Worker] Intercepting ${event.request.url} -> serving local /static/old_minecraft_assets/game_response.txt`);
+    // 1. Rule for 'https://www.minecraft.net/game/?n=--username&i=WebPlayer'
+    // This is the URL currently causing the CORS error.
+    if (requestUrl.origin === 'https://www.minecraft.net' &&
+        requestUrl.pathname === '/game/' &&
+        requestUrl.search === '?n=--username&i=WebPlayer') {
+
+        console.log(`[Service Worker] **** MATCHED! Intercepting game URL: ${event.request.url} ****`);
         event.respondWith(
             caches.match('/static/old_minecraft_assets/game_response.txt') // Try to get from cache first
                 .then(cachedResponse => {
                     if (cachedResponse) {
+                        console.log('[Service Worker] Serving game_response.txt from cache.');
                         return cachedResponse;
                     }
-                    // If not in cache, fetch from your local Netlify server path
+                    console.log('[Service Worker] Serving game_response.txt from network (local).');
                     return fetch('/static/old_minecraft_assets/game_response.txt');
                 })
                 .catch(error => {
@@ -104,22 +95,78 @@ self.addEventListener('fetch', (event) => {
         return; // IMPORTANT: Stop processing this event, we've handled it.
     }
 
-    // 3. Optional: Intercept 'http://minecraft.net/skins/...'
-    // If you want the Service Worker to handle skins instead of CheerpJ's networkHook.
-    // You should remove the skin networkHook from cheerpjInit if you use this.
-    if (requestUrl.origin === 'http://minecraft.net' && requestUrl.pathname.startsWith('/skins/')) {
-        console.log(`[Service Worker] Intercepting ${event.request.url} -> serving placeholder skin.`);
+    // 2. Rule for 'http://www.minecraft.net/resources/'
+    // This handles the 'resources' folder request.
+    if (requestUrl.origin === 'http://www.minecraft.net' && requestUrl.pathname === '/resources/') {
+        console.log(`[Service Worker] **** MATCHED! Intercepting resources URL: ${event.request.url} ****`);
         event.respondWith(
-            fetch('https://placehold.co/64x64/000000/FFFFFF/png?text=SKIN') // Fetch placeholder from its origin
+            caches.match('/static/old_minecraft_assets/resources_response.txt')
+                .then(cachedResponse => {
+                    if (cachedResponse) {
+                        console.log('[Service Worker] Serving resources_response.txt from cache.');
+                        return cachedResponse;
+                    }
+                    console.log('[Service Worker] Serving resources_response.txt from network (local).');
+                    return fetch('/static/old_minecraft_assets/resources_response.txt');
+                })
                 .catch(error => {
-                    console.error('[Service Worker] Failed to serve skin placeholder:', error);
-                    return new Response('Failed to load skin placeholder', { status: 500 });
+                    console.error('[Service Worker] Failed to serve local resources_response.txt:', error);
+                    return new Response('Failed to load resources response', { status: 500 });
                 })
         );
         return;
     }
 
-    // IMPORTANT: For any other requests NOT matched above, let them go to the network normally.
-    // This ensures your other site assets (JARs, etc.) still load.
+    // 3. Rule for 'http://www.minecraft.net/play.jsp?n=DECRAFT_Player&s=0'
+    // This rule is for the URL seen in the custom launcher's logs.
+    if (requestUrl.origin === 'http://www.minecraft.net' &&
+        requestUrl.pathname === '/play.jsp' &&
+        requestUrl.search === '?n=DECRAFT_Player&s=0') {
+
+        console.log(`[Service Worker] **** MATCHED! Intercepting play.jsp URL: ${event.request.url} ****`);
+        event.respondWith(
+            caches.match('/static/old_minecraft_assets/play_response.txt')
+                .then(cachedResponse => {
+                    if (cachedResponse) {
+                        console.log('[Service Worker] Serving play_response.txt from cache.');
+                        return cachedResponse;
+                    }
+                    console.log('[Service Worker] Serving play_response.txt from network (local).');
+                    return fetch('/static/old_minecraft_assets/play_response.txt');
+                })
+                .catch(error => {
+                    console.error('[Service Worker] Failed to serve local play_response.txt:', error);
+                    return new Response('Failed to load play.jsp response', { status: 500 });
+                })
+        );
+        return;
+    }
+
+    // 4. Rule for Skins: 'http://minecraft.net/skins/...'
+    // Assumes you've placed the skin at /static/old_minecraft_assets/skins/WebPlayer.png
+    if (requestUrl.origin === 'http://minecraft.net' && requestUrl.pathname.startsWith('/skins/')) {
+        const skinFileName = requestUrl.pathname.split('/').pop(); // Gets 'WebPlayer.png'
+        const localSkinPath = `/static/old_minecraft_assets/skins/${skinFileName}`; // Assuming WebPlayer.png
+
+        console.log(`[Service Worker] Intercepting skin URL: ${event.request.url} -> serving local ${localSkinPath}`);
+        event.respondWith(
+            caches.match(localSkinPath)
+                .then(cachedResponse => {
+                    if (cachedResponse) {
+                        console.log('[Service Worker] Serving skin from cache.');
+                        return cachedResponse;
+                    }
+                    console.log('[Service Worker] Serving skin from network (local).');
+                    return fetch(localSkinPath);
+                })
+                .catch(error => {
+                    console.error('[Service Worker] Failed to serve local skin:', error);
+                    return new Response('Failed to load skin', { status: 500 });
+                })
+        );
+        return;
+    }
+
+    // IMPORTANT: For any other requests NOT matched by the above rules, let them go to the network normally.
     event.respondWith(fetch(event.request));
 });
