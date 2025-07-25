@@ -1,15 +1,15 @@
 // static/sw.js
 
 // Name for your cache storage. Increment this number when you change which files are cached.
-const CACHE_NAME = 'minecraft-old-assets-v3'; // Increased version for a fresh start with all rules
+const CACHE_NAME = 'minecraft-old-assets-v4'; // Increment version to ensure new SW is activated
 
 // List of static files that the Service Worker should immediately try to cache upon installation.
-// These are the *local paths* on your Netlify site.
+// THESE ARE THE CORRECTED LOCAL PATHS ON YOUR NETLIFY SITE.
 const urlsToPrecache = [
-    '/static/old_minecraft_assets/game_response.txt',       // For the /game/ endpoint
-    '/static/old_minecraft_assets/resources_response.txt',  // For the /resources/ endpoint
-    '/static/old_minecraft_assets/play_response.txt',       // For the /play.jsp endpoint (if used)
-    '/static/old_minecraft_assets/skins/WebPlayer.png',     // For the player skin
+    '/old_minecraft_assets/game_response.txt',       // CORRECTED path
+    '/old_minecraft_assets/resources_response.txt',  // CORRECTED path
+    '/old_minecraft_assets/play_response.txt',       // CORRECTED path
+    '/old_minecraft_assets/skins/WebPlayer.png',     // CORRECTED path
     // Add any other specific assets the old Minecraft client might request directly from minecraft.net
 ];
 
@@ -59,7 +59,6 @@ self.addEventListener('fetch', (event) => {
     const requestUrl = new URL(event.request.url);
 
     // --- DEBUGGING START ---
-    // These logs will appear in the Service Worker's dedicated console window (Application -> Service Workers -> click sw.js)
     console.groupCollapsed(`[Service Worker] Intercepting fetch: ${event.request.url}`);
     console.log('  Origin:', requestUrl.origin);
     console.log('  Pathname:', requestUrl.pathname);
@@ -70,44 +69,49 @@ self.addEventListener('fetch', (event) => {
 
 
     // 1. Rule for 'https://www.minecraft.net/game/?n=--username&i=WebPlayer'
-    // This is the URL currently causing the CORS error.
     if (requestUrl.origin === 'https://www.minecraft.net' &&
         requestUrl.pathname === '/game/' &&
         requestUrl.search === '?n=--username&i=WebPlayer') {
 
         console.log(`[Service Worker] **** MATCHED! Intercepting game URL: ${event.request.url} ****`);
         event.respondWith(
-            caches.match('/static/old_minecraft_assets/game_response.txt') // Try to get from cache first
+            // CORRECTED PATH: Removed /static
+            caches.match('/old_minecraft_assets/game_response.txt')
                 .then(cachedResponse => {
                     if (cachedResponse) {
                         console.log('[Service Worker] Serving game_response.txt from cache.');
                         return cachedResponse;
                     }
                     console.log('[Service Worker] Serving game_response.txt from network (local).');
-                    return fetch('/static/old_minecraft_assets/game_response.txt');
+                    // CORRECTED PATH: Removed /static
+                    return fetch('/old_minecraft_assets/game_response.txt');
                 })
                 .catch(error => {
                     console.error('[Service Worker] Failed to serve local game_response.txt:', error);
-                    // Return a generic error response if your local file cannot be served
                     return new Response('Failed to load game response from local cache or server', { status: 500 });
                 })
         );
-        return; // IMPORTANT: Stop processing this event, we've handled it.
+        return;
     }
 
     // 2. Rule for 'http://www.minecraft.net/resources/'
-    // This handles the 'resources' folder request.
+    // Important: Your console showed a 404 for https://in-20091223-2.netlify.app/resources/
+    // This SW rule only intercepts the ORIGINAL http://minecraft.net/resources/ URL.
+    // If you still get a 404 for the netlify.app/resources/ URL, it means a networkHook
+    // is active, or the game is directly requesting that local URL without SW intervention.
     if (requestUrl.origin === 'http://www.minecraft.net' && requestUrl.pathname === '/resources/') {
         console.log(`[Service Worker] **** MATCHED! Intercepting resources URL: ${event.request.url} ****`);
         event.respondWith(
-            caches.match('/static/old_minecraft_assets/resources_response.txt')
+            // CORRECTED PATH: Removed /static
+            caches.match('/old_minecraft_assets/resources_response.txt')
                 .then(cachedResponse => {
                     if (cachedResponse) {
                         console.log('[Service Worker] Serving resources_response.txt from cache.');
                         return cachedResponse;
                     }
                     console.log('[Service Worker] Serving resources_response.txt from network (local).');
-                    return fetch('/static/old_minecraft_assets/resources_response.txt');
+                    // CORRECTED PATH: Removed /static
+                    return fetch('/old_minecraft_assets/resources_response.txt');
                 })
                 .catch(error => {
                     console.error('[Service Worker] Failed to serve local resources_response.txt:', error);
@@ -118,21 +122,22 @@ self.addEventListener('fetch', (event) => {
     }
 
     // 3. Rule for 'http://www.minecraft.net/play.jsp?n=DECRAFT_Player&s=0'
-    // This rule is for the URL seen in the custom launcher's logs.
     if (requestUrl.origin === 'http://www.minecraft.net' &&
         requestUrl.pathname === '/play.jsp' &&
         requestUrl.search === '?n=DECRAFT_Player&s=0') {
 
         console.log(`[Service Worker] **** MATCHED! Intercepting play.jsp URL: ${event.request.url} ****`);
         event.respondWith(
-            caches.match('/static/old_minecraft_assets/play_response.txt')
+            // CORRECTED PATH: Removed /static
+            caches.match('/old_minecraft_assets/play_response.txt')
                 .then(cachedResponse => {
                     if (cachedResponse) {
                         console.log('[Service Worker] Serving play_response.txt from cache.');
                         return cachedResponse;
                     }
                     console.log('[Service Worker] Serving play_response.txt from network (local).');
-                    return fetch('/static/old_minecraft_assets/play_response.txt');
+                    // CORRECTED PATH: Removed /static
+                    return fetch('/old_minecraft_assets/play_response.txt');
                 })
                 .catch(error => {
                     console.error('[Service Worker] Failed to serve local play_response.txt:', error);
@@ -143,10 +148,9 @@ self.addEventListener('fetch', (event) => {
     }
 
     // 4. Rule for Skins: 'http://minecraft.net/skins/...'
-    // Assumes you've placed the skin at /static/old_minecraft_assets/skins/WebPlayer.png
     if (requestUrl.origin === 'http://minecraft.net' && requestUrl.pathname.startsWith('/skins/')) {
-        const skinFileName = requestUrl.pathname.split('/').pop(); // Gets 'WebPlayer.png'
-        const localSkinPath = `/static/old_minecraft_assets/skins/${skinFileName}`; // Assuming WebPlayer.png
+        const skinFileName = requestUrl.pathname.split('/').pop();
+        const localSkinPath = `/old_minecraft_assets/skins/${skinFileName}`; // CORRECTED PATH: Removed /static
 
         console.log(`[Service Worker] Intercepting skin URL: ${event.request.url} -> serving local ${localSkinPath}`);
         event.respondWith(
