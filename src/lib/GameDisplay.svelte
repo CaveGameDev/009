@@ -40,6 +40,18 @@
 			"/app/"
 
 		);
+
+// Wait a bit to ensure Minecraft window is created
+await new Promise(resolve => setTimeout(resolve, 1000));
+
+// Try to init AWTMouseShim
+try {
+	const shim = Java.type("com.STG.Shims.AWTMouseShim");
+	shim.initFromTopFrame();
+	console.log("AWTMouseShim initialized from top frame.");
+} catch (e) {
+	console.error("AWTMouseShim init failed:", e);
+}
 	}
 
 	onMount(async () => {
