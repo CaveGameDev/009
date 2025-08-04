@@ -37,8 +37,8 @@
 		await cheerpjRunMain(
 			"com.STG.Main.InterceptingJar",
 			pathJarLibs,
-			"--username", "WebPlayer",
-			"==session", "0"
+			"/app/"
+
 		);
 	}
 
