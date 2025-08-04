@@ -35,11 +35,10 @@
 		tryPlausible("Play"); // Log play event if plausible is configured
 
 		await cheerpjRunMain(
-			"net.minecraft.launchwrapper.Launch",
+			"com.STG.Main.InterceptingJar",
 			pathJarLibs,
 			"--username", "WebPlayer",
-			"==session", "0",
-			"--tweakClass", "net.minecraft.launchwrapper.AlphaVanillaTweaker"
+			"==session", "0"
 		);
 	}
 
