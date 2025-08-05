@@ -40,6 +40,7 @@
 			"/app/"
 
 		);
+	}
 
 	onMount(async () => {
 		display = document.getElementById('display') as HTMLDivElement;
