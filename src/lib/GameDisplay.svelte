@@ -5,7 +5,7 @@
 	// --- Minecraft Launch Configuration ---
 	const pathJarMinecraft = "/app/First InfDev.jar";
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
-	const pathJarLibs = `/app/InterceptingJar.jar:${pathJarLaunchWrapper}:/app/asm-all-4.1.jar:/app/jopt-simple-4.5.jar:/app/lwjgl/LWJGL-PATCH3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
+	const pathJarLibs = `/app/InterceptingJar.jar:${pathJarLaunchWrapper}:/app/asm-all-4.1.jar:/app/jopt-simple-4.5.jar:/app/LWJGL-PATCH3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
 
 	// DOM element references
 	let display: HTMLDivElement;
