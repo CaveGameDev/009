@@ -3,7 +3,7 @@
 	import { tryPlausible, showElement, hideElement } from "./utilities";
 
 	// --- Minecraft Launch Configuration ---
-	const pathJarMinecraft = "/app/31.jar";
+	const pathJarMinecraft = "/app/survivaltest.jar";
 	const pathJarLaunchWrapper = "/app/launchwrapper-1.6.jar";
 	const pathJarLibs = `/app/InterceptingJar.jar:${pathJarLaunchWrapper}:/app/asm-all-4.1.jar:/app/jopt-simple-4.5.jar:/app/lwjgl/LWJGL-Jinput.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
 
