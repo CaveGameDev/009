@@ -19,7 +19,7 @@
 </script>
 
 <header>
-	<h1>Second Infdev</h1>
+	<h1>InfDev Plus</h1>
 	<div>
 		<GameDisplay />
 	</div>
