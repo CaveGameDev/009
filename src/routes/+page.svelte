@@ -19,7 +19,7 @@
 </script>
 
 <header>
-	<h1>URL_INTERCEPT_TEST</h1>
+	<h1>in-20100125-2</h1>
 	<div>
 		<GameDisplay />
 	</div>
