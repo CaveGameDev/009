@@ -1,0 +1,114 @@
+2025-08-06 01:20:10 [INFO] [CLIENT] 33718 recipes
+2025-08-06 01:20:10 [INFO] [CLIENT] Starting up SoundSystem...
+2025-08-06 01:20:11 [INFO] [CLIENT] Initializing LWJGL OpenAL
+2025-08-06 01:20:11 [INFO] [CLIENT] (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+2025-08-06 01:20:11 [INFO] [CLIENT] OpenAL initialized.
+2025-08-06 01:20:11 [INFO] [CLIENT] Making dynamic texture for: textures/blocks/water.txt
+2025-08-06 01:20:11 [INFO] [CLIENT] Making dynamic texture for: textures/blocks/water_flow.txt
+2025-08-06 01:20:11 [INFO] [CLIENT] Making dynamic texture for: textures/blocks/lava.txt
+2025-08-06 01:20:11 [INFO] [CLIENT] Making dynamic texture for: textures/blocks/lava_flow.txt
+2025-08-06 01:20:11 [INFO] [CLIENT] Making dynamic texture for: textures/blocks/potionjuice.txt
+2025-08-06 01:20:11 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/hellSoil_snow.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:11 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/oreTopaz_black.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:11 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/wall.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:11 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/oreAdamantine_black.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:11 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/nyliumGrass_snow.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:11 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/grassGold_snow.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:12 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/oreAmethyst_black.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:12 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/gildedBloodstone_black.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:12 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/gildedHolystone_black.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:12 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/portal.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:12 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/grassPurple_snow.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:12 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/oreDamascus_black.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:12 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/trapdoor_glass.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:12 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/grassCold_snow.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:12 [INFO] [CLIENT] Adding dynamic texture net.minecraft.nb@5b5c68b7
+2025-08-06 01:20:12 [INFO] [CLIENT] Adding dynamic texture net.minecraft.nc@74e9d99b
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/blocks/fan.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/blocks/fire_0.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/blocks/fire_1.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/blocks/freezerActive.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/blocks/furnace_front_lit.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/blocks/gear.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/blocks/gear_2.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/blocks/generatorLit.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/blocks/hellfire_0.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/blocks/hellfire_1.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/blocks/hellforge.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Adding dynamic texture net.minecraft.nd@7cb68d35
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/blocks/magma.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Adding dynamic texture net.minecraft.ne@b2e3f0f
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/blocks/smoker_on.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/blocks/stonecutter_saw.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Adding dynamic texture net.minecraft.ng@dfedede
+2025-08-06 01:20:12 [INFO] [CLIENT] Saving atlas image to .minecraft/debug.stitched_terrain.png
+2025-08-06 01:20:12 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/items/back.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:12 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/items/potion.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:12 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/items/spawnEgg.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:12 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/items/flag.png, but that file does not exist. Ignoring.
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/items/clock.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/items/compass.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/items/compassAmethyst.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Found animation info for: textures/items/enderEye.txt
+2025-08-06 01:20:12 [INFO] [CLIENT] Saving atlas image to .minecraft/debug.stitched_items.png
+2025-08-06 01:21:14 [INFO] [CLIENT] Stopping!
+2025-08-06 01:21:14 [INFO] [CLIENT] SoundSystem shutting down...
+2025-08-06 01:21:14 [INFO] [CLIENT] Author: Paul Lamb, www.paulscode.com
+2025-08-06 01:21:16 [INFO] [CLIENT] 33718 recipes
+2025-08-06 01:21:17 [INFO] [CLIENT] Starting up SoundSystem...
+2025-08-06 01:21:17 [INFO] [CLIENT] Initializing LWJGL OpenAL
+2025-08-06 01:21:17 [INFO] [CLIENT] (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+2025-08-06 01:21:17 [INFO] [CLIENT] OpenAL initialized.
+2025-08-06 01:21:18 [INFO] [CLIENT] Making dynamic texture for: textures/blocks/water.txt
+2025-08-06 01:21:18 [INFO] [CLIENT] Making dynamic texture for: textures/blocks/water_flow.txt
+2025-08-06 01:21:18 [INFO] [CLIENT] Making dynamic texture for: textures/blocks/lava.txt
+2025-08-06 01:21:18 [INFO] [CLIENT] Making dynamic texture for: textures/blocks/lava_flow.txt
+2025-08-06 01:21:18 [INFO] [CLIENT] Making dynamic texture for: textures/blocks/potionjuice.txt
+2025-08-06 01:21:18 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/hellSoil_snow.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:18 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/oreTopaz_black.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:18 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/wall.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:18 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/oreAdamantine_black.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:18 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/nyliumGrass_snow.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:18 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/grassGold_snow.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:18 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/oreAmethyst_black.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:18 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/gildedBloodstone_black.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:18 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/gildedHolystone_black.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:18 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/portal.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:18 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/grassPurple_snow.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:18 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/oreDamascus_black.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:18 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/trapdoor_glass.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:18 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/blocks/grassCold_snow.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:19 [INFO] [CLIENT] Adding dynamic texture net.minecraft.nb@16877027
+2025-08-06 01:21:19 [INFO] [CLIENT] Adding dynamic texture net.minecraft.nc@b39b9c1
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/blocks/fan.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/blocks/fire_0.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/blocks/fire_1.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/blocks/freezerActive.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/blocks/furnace_front_lit.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/blocks/gear.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/blocks/gear_2.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/blocks/generatorLit.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/blocks/hellfire_0.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/blocks/hellfire_1.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/blocks/hellforge.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Adding dynamic texture net.minecraft.nd@406eb520
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/blocks/magma.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Adding dynamic texture net.minecraft.ne@7eafa88
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/blocks/smoker_on.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/blocks/stonecutter_saw.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Adding dynamic texture net.minecraft.ng@6f777c0a
+2025-08-06 01:21:19 [INFO] [CLIENT] Saving atlas image to .minecraft/debug.stitched_terrain.png
+2025-08-06 01:21:19 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/items/back.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:19 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/items/potion.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:19 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/items/spawnEgg.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:19 [WARNING] [CLIENT] TextureManager.createTexture called for file textures/items/flag.png, but that file does not exist. Ignoring.
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/items/clock.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/items/compass.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/items/compassAmethyst.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Found animation info for: textures/items/enderEye.txt
+2025-08-06 01:21:19 [INFO] [CLIENT] Saving atlas image to .minecraft/debug.stitched_items.png
+2025-08-06 01:21:30 [WARNING] [CLIENT] Unable to find spawn biome
+2025-08-06 01:21:33 [WARNING] [CLIENT] Failed to get skin for DECRAFT_Player
+java.lang.Exception: Failed to get UUID: Server responded with non-200 HTTP code.
+	at net.minecraft.eo.run(SourceFile:42)
+2025-08-06 01:22:49 [INFO] [CLIENT] Stopping!
