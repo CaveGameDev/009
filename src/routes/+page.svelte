@@ -19,7 +19,7 @@
 </script>
 
 <header>
-	<h1>0.30</h1>
+	<h1>0.0.9a</h1>
 	<div>
 		<GameDisplay />
 	</div>
