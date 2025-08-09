@@ -1,1 +1,1 @@
-rewrite of broesercraft to tun many different minecraft versions, no time limit
+rewrite of broesercraft to tun many different minecraft versions, no time limit. also added modified launchwrapper with url spoofing cor infdev/indev version, and currently working on lwjgl native mouse bypasser to use java.awt instead of lwjgl's native os-level cursor.
