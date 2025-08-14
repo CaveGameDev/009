@@ -85,9 +85,14 @@ header {
 	height: 500px;
 	inset: 0;
 
-	/* --- ZOOM tweak --- */
-	zoom: min(calc(100vw / 856), calc(100vh / 480));
-	transform-origin: top left;
+	/* --- Zoom tweak from center --- */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(
+		min(calc(100vw / 856), calc(100vh / 480))
+	);
+	transform-origin: center center;
 }
 
 canvas {
