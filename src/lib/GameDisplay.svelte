@@ -52,9 +52,28 @@
         );
     }
 
-    onMount(() => {
-        display = document.getElementById('display') as HTMLDivElement;
-        intro = document.getElementById('intro') as HTMLDivElement;
-        startCheerpJ();
-    });
+
+	onMount(async () => {
+		display = document.getElementById('display');
+		intro = document.getElementById('intro');
+
+		startCheerpJ();
+	});
 </script>
+
+<div class="game-container">
+	<div id="intro" class="intro">
+		<p>
+			This is Minecraft running unmodified in the browser.
+		</p>
+		<p>
+			Clicking the button below will start the game.
+			
+		</p>
+		<button on:click={startGame}>Play!</button>
+		<div class="disclaimer">
+			This is not an official Minecraft product. It is not approved by or associated with Mojang or Microsoft.
+		</div>
+	</div>
+	<div id="display" class="display"></div>
+</div>
