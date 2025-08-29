@@ -8,10 +8,6 @@ html, body {
 	box-sizing: border-box;
 }
 
-@font-face {
-	font-family: "Minecrafter";
-	src: url("/fonts/minecrafter/Minecrafter.Reg.woff2"), sans-serif;
-}
 
 header {
 	background: #171615;
