@@ -50,9 +50,8 @@
 		// Use net.minecraft.launchwrapper.Launch as the main class,
 		// and pass the tweakClass as a program argument for Minecraft.
 		await cheerpjRunMain(
-			"net.minecraft.launchwrapper.Launch",
+			"com.mojang.minecraft.Minecraft",
 			pathJarLibs,
-			"--tweakClass", "net.minecraft.launchwrapper.AlphaVanillaTweaker",
 			"--username", "Player"
 		);
 	}
